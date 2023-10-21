@@ -1,0 +1,53 @@
+.cards {
+    background-color: $color-gray-light;
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 4rem 6rem;
+    padding: 10rem 0;
+
+}
+.card {
+    background-color: $color-blue-dark;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 4.5rem;
+    &__img {
+        width: 100%;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    &__title {
+        padding: 1.5rem 1.5rem;
+        background-color: $color-green-dark;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        width: 80%;
+        justify-self: center;
+        align-self: end;
+        transform: translateY(50%);
+    }
+    &__btn {
+        grid-column: 1 / -1;
+
+    }
+    &__svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+.content {
+    margin-left: 2.5rem;
+    display: flex;
+
+    & p {
+        font-size: 1.6rem;
+        color: $color-gray-light;
+        font-weight: 300;
+    }
+}
